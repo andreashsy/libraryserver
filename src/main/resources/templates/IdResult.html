@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https:\\www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search</title>
+</head>
+<body th:object="${bookObyById}">
+    
+    <h1>Search result</h1>
+    <p>Title:</p>
+    <p th:text="${bookObyById.title}">..</p>
+    <br />
+    <p>Author:</p>
+    <p th:text="${bookObyById.author}">..</p>
+    <br/>
+    <p> Phone number:</p>
+    <p th:text="${bookObyById.thumbnailUrl}">..</p>
+
+    
+</body>
+</html>

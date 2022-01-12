@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https:\\www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a new book here!</title>
+</head>
+<body>
+    <h1>Please fill in the book details</h1>
+
+    <form action="#" 
+    th:action="@{/addbook}" 
+    th:object="${bookObj}" 
+    method="post">
+        <p> 
+            <!-- the * refereces to the object in this form, in this case is generate-->
+            
+            <label for="name">Title</label>
+            <input type="text" th:field="*{title}" id="name" name="name" /><br>
+            
+            <label for="contactNumber">Author</label>
+            <input type="text" th:field="*{author}" id="contactNumber" name="contactNumber"/><br>
+            
+            <label for="emailAddress">Thumbnail Url</label>
+            <input type="text" th:field="*{thumbnailUrl}" id="emailAddress" name="emailAddress"/><br>
+      
+        </p>
+        <input type="submit" value="Submit"/>
+</body>
+</html>
